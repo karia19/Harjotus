@@ -36,6 +36,10 @@ public class main {
         ArtistDao artistDao = new ArtistDao(database);
         KappaleetDao kappaleetDao = new KappaleetDao(database , artistDao);
 
+        if (System.getenv("PORT") != null) {
+            Spark.port(Integer.valueOf(System.getenv("PORT")));
+        }
+
 
         /// Eka Sivu ////
 
