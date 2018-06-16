@@ -1,17 +1,20 @@
-package harjoitusTyo;
+package harjoitusTyo.aloitus;
 
-import java.sql.*;
-import java.util.HashMap;
-
-import harjoitusTyo.Dao.*;
-
-import harjoitusTyo.Database.*;
-import harjoitusTyo.domain.*;
+import harjoitusTyo.Dao.ArtistDao;
+import harjoitusTyo.Dao.KappaleetDao;
+import harjoitusTyo.Database.Database;
+import harjoitusTyo.domain.Artist;
+import harjoitusTyo.domain.Kappaleet;
 import spark.ModelAndView;
 import spark.Request;
 import spark.Response;
 import spark.Spark;
 import spark.template.thymeleaf.ThymeleafTemplateEngine;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.util.HashMap;
 
 public class main {
 

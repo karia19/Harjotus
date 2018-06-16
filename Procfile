@@ -1,1 +1,1 @@
-web:    java -cp target/classes:target/dependency/* harjoitusTyo.main
+web:    java -cp target/classes:target/dependency/* harjoitusTyo.aloitus.main
