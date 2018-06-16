@@ -38,7 +38,7 @@ public class main {
             Spark.port(Integer.valueOf(System.getenv("PORT")));
         }
 
-        Database database = new Database("jdbc:sqlite:/Users/kari/sqliterc/Songs.db ");
+        Database database = new Database("jdbc:sqlite:Songs.db ");
         ArtistDao artistDao = new ArtistDao(database);
         KappaleetDao kappaleetDao = new KappaleetDao(database , artistDao);
 
