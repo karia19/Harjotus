@@ -15,6 +15,8 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.HashMap;
+import java.sql.PreparedStatement;
+import spark.ModelAndView;
 
 public class main {
 
@@ -32,13 +34,13 @@ public class main {
 
     public static void main(String[] args) throws ClassNotFoundException, SQLException {
 
-        Database database = new Database("jdbc:sqlite:/Users/kari/sqliterc/Songs.db ");
-        ArtistDao artistDao = new ArtistDao(database);
-        KappaleetDao kappaleetDao = new KappaleetDao(database , artistDao);
-
         if (System.getenv("PORT") != null) {
             Spark.port(Integer.valueOf(System.getenv("PORT")));
         }
+
+        Database database = new Database("jdbc:sqlite:/Users/kari/sqliterc/Songs.db ");
+        ArtistDao artistDao = new ArtistDao(database);
+        KappaleetDao kappaleetDao = new KappaleetDao(database , artistDao);
 
 
         /// Eka Sivu ////
