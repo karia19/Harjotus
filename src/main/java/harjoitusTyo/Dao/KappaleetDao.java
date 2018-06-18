@@ -120,7 +120,7 @@ public class KappaleetDao implements Dao<Kappaleet, Integer> {
             System.out.println(e.getMessage());
             dbconnection.close();
         }
-        return null;
+        return object;
 
     }
 

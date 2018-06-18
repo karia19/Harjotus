@@ -77,7 +77,7 @@ public class ArtistDao implements Dao<Artist, Integer> {
             System.out.println(e.getMessage());
             dbconnection.close();
         }
-        return null;
+        return object;
     }
 
     @Override

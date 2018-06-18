@@ -5,10 +5,7 @@ import harjoitusTyo.Dao.KappaleetDao;
 import harjoitusTyo.Database.Database;
 import harjoitusTyo.domain.Artist;
 import harjoitusTyo.domain.Kappaleet;
-import spark.ModelAndView;
-import spark.Request;
-import spark.Response;
-import spark.Spark;
+import spark.*;
 import spark.template.thymeleaf.ThymeleafTemplateEngine;
 
 import java.sql.Connection;
@@ -17,6 +14,8 @@ import java.sql.SQLException;
 import java.util.HashMap;
 import java.sql.PreparedStatement;
 import spark.ModelAndView;
+
+import static spark.Spark.port;
 
 public class main {
 
@@ -32,16 +31,18 @@ public class main {
     }
 
 
+
     public static void main(String[] args) throws ClassNotFoundException, SQLException {
 
+
+
         if (System.getenv("PORT") != null) {
-            Spark.port(Integer.valueOf(System.getenv("PORT")));
+            port(Integer.valueOf(System.getenv("PORT")));
         }
 
         Database database = new Database("jdbc:sqlite:Songs.db ");
         ArtistDao artistDao = new ArtistDao(database);
         KappaleetDao kappaleetDao = new KappaleetDao(database , artistDao);
-
 
         /// Eka Sivu ////
 
@@ -60,12 +61,15 @@ public class main {
 
         /// Toka sivu lisää artisti ///
 
+
         Spark.get("/sivu/artisti", (reg, res) -> {
+
             HashMap ma = new HashMap();
             ma.put("artist", artistDao.findAll());
 
             return new ModelAndView(ma, "artisti");
         }, new ThymeleafTemplateEngine());
+
 
 
         Spark.post("/sivu/artisti", (Request req, Response res) -> {
