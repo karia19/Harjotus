@@ -17,20 +17,9 @@ import static spark.Spark.port;
 
 public class main {
 
-    /// Database ///
-
-    public static Connection getConnection() throws Exception {
-        String dbUrl = System.getenv("JDBC_DATABASE_URL");
-        if (dbUrl != null && dbUrl.length() > 0) {
-            return DriverManager.getConnection(dbUrl);
-        }
-
-        return DriverManager.getConnection("jdbc:sqlite:Songs.db");
-    }
 
 
-
-    public static void main(String[] args) throws ClassNotFoundException, SQLException {
+    public static void main(String[] args) throws ClassNotFoundException, SQLException, Exception {
 
 
 
@@ -38,7 +27,7 @@ public class main {
             port(Integer.valueOf(System.getenv("PORT")));
         }
 
-        Database database = new Database("jdbc:sqlite:Songs.db ");
+        Database database = new Database("jdbc:sqlite:HarjoitusTyö.db");
         ArtistDao artistDao = new ArtistDao(database);
         KappaleetDao kappaleetDao = new KappaleetDao(database , artistDao);
 

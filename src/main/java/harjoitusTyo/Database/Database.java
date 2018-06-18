@@ -6,10 +6,11 @@ public class Database {
 
     private String datbaseAdress;
 
-    public Database(String datbaseAdress) throws ClassNotFoundException
+    public Database(String datbaseAdress) throws ClassNotFoundException, Exception
     {
         this.datbaseAdress = datbaseAdress;
     }
+    /*
 
     public Connection getConnection() throws SQLException
     {
@@ -20,5 +21,15 @@ public class Database {
         }
         return DriverManager.getConnection(datbaseAdress);
     }
+    */
+    public  Connection getConnection() throws Exception {
+        String dbUrl = System.getenv("JDBC_DATABASE_URL");
+        if (dbUrl != null && dbUrl.length() > 0) {
+            return DriverManager.getConnection(dbUrl);
+        }
+
+        return DriverManager.getConnection("jdbc:sqlite:HarjoitusTyö.db");
+    }
+
 }
 
