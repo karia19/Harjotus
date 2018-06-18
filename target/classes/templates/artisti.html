@@ -21,7 +21,7 @@
 
 <h3 th:text="${uusiArtisti}" te></h3>
 
-<form method="POST" action="/sivu/artisti">
+<form method="POST" action="/artisti">
     <span>Name:</span><br/>
     <input type="text" name="name"/><br/>
     <input type="submit" value="Artist/Band"/>
@@ -31,7 +31,8 @@
     <input type="submit" value="Delete"/>
 </form>
 
-<a href="/">Main Page</a>
+
+<a th:href="@{~/}">Main</a>
 
 </body>
 </html>

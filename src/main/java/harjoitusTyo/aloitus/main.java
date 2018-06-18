@@ -12,9 +12,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.HashMap;
-import java.sql.PreparedStatement;
 import spark.ModelAndView;
-
 import static spark.Spark.port;
 
 public class main {
@@ -46,7 +44,7 @@ public class main {
 
         /// Eka Sivu ////
 
-        Spark.get("/sivu", (req, res) -> {
+        Spark.get("/", (req, res) -> {
             HashMap map = new HashMap<>();
             map.put("artist", artistDao.findAll());
 
@@ -55,6 +53,7 @@ public class main {
             //map.put("Max", kappaleetDao.maxComments());
             map.put("MaxArtist", artistDao.findOne(kappaleetDao.maxComments()));
 
+
             return new ModelAndView(map, "index");
         }, new ThymeleafTemplateEngine());
 
@@ -62,7 +61,7 @@ public class main {
         /// Toka sivu lisää artisti ///
 
 
-        Spark.get("/sivu/artisti", (reg, res) -> {
+        Spark.get("/artisti" ,(reg, res) -> {
 
             HashMap ma = new HashMap();
             ma.put("artist", artistDao.findAll());
@@ -72,7 +71,7 @@ public class main {
 
 
 
-        Spark.post("/sivu/artisti", (Request req, Response res) -> {
+        Spark.post("/artisti", (Request req, Response res) -> {
             HashMap map1 = new HashMap<>();
             String id = req.queryParams("remove");
             //artistDao.delete(Integer.parseInt(id));
@@ -96,14 +95,14 @@ public class main {
 
         /// Lisää kappale ja muut ////
 
-        Spark.get("/sivu/songs",(reg, res) -> {
+        Spark.get("/songs",(reg, res) -> {
             HashMap m = new HashMap();
             m.put("artist", artistDao.findAll());
 
             return new ModelAndView(m, "songs");
         }, new ThymeleafTemplateEngine());
 
-        Spark.post("/sivu/songs", (req, res) -> {
+        Spark.post("/songs", (req, res) -> {
             HashMap map = new HashMap();
             int id = Integer.parseInt(req.queryParams("artistii"));
             System.out.println(id);
@@ -128,14 +127,14 @@ public class main {
 
         /// Stats metodit ////
 
-        Spark.get("/sivu/stats", (reg, res) ->{
+        Spark.get("/stats", (reg, res) ->{
             HashMap m = new HashMap();
             m.put("artist", artistDao.findAll());
 
             return new ModelAndView(m, "stats");
         }, new ThymeleafTemplateEngine());
 
-        Spark.post("/sivu/stats", (req, res) -> {
+        Spark.post("/stats", (req, res) -> {
             String idd = req.queryParams("artistii");
 
             HashMap m = new HashMap();

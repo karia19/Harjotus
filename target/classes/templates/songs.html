@@ -11,7 +11,7 @@
 
 <h2>Add song</h2>
 
-<form action="/sivu/songs" method='POST'>
+<form action="/songs" method='POST'>
     <td>
         <select name="artistii">
             <option value=""> -- </option>
@@ -28,7 +28,7 @@
 
 <h3 th:text="${virhe}" te></h3>
 
-<form method="POST" action="/sivu/songs">
+<form method="POST" action="/songs">
     <span>Song:</span><br/>
     <input type="text" name="name"/><br/>
 
@@ -39,7 +39,7 @@
 
 
 </form>
-<a href="/sivu">Main Page</a>
+        <a th:href="@{~/}">Main</a>
 
 
 
