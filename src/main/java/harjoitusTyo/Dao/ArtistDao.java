@@ -13,20 +13,12 @@ public class ArtistDao implements Dao<Artist, Integer> {
     public ArtistDao(Database database){
         this.database = database;
     }
-    public static Connection getConnection() throws Exception {
-        String dbUrl = System.getenv("JDBC_DATABASE_URL");
-        if (dbUrl != null && dbUrl.length() > 0) {
-            return DriverManager.getConnection(dbUrl);
-        }
-
-        return DriverManager.getConnection("jdbc:sqlite:HarjoitusTyö.db");
-    }
 
 
     @Override
     public Artist findOne(Integer key) throws SQLException, Exception {
         //Connection conn = database.getConnection();
-        Connection conn = getConnection();
+        Connection conn =database.getConnection();
         PreparedStatement pre = conn.prepareStatement("SELECT * FROM Artist WHERE id = ?");
         pre.setObject(1, key);
         ResultSet r = pre.executeQuery();
@@ -46,7 +38,7 @@ public class ArtistDao implements Dao<Artist, Integer> {
     public List<Artist> findAll() throws SQLException , Exception{
         List<Artist> list = new ArrayList<>();
 
-        try (Connection conn = getConnection();
+        try (Connection conn = database.getConnection();
              ResultSet rs = conn.prepareStatement("SELECT id, nimi FROM Artist").executeQuery()){
 
             while (rs.next()){
@@ -69,7 +61,7 @@ public class ArtistDao implements Dao<Artist, Integer> {
         PreparedStatement preparedStatement = null;
 
         try {
-            dbconnection = getConnection();
+            dbconnection = database.getConnection();
             preparedStatement = dbconnection.prepareStatement("INSERT INTO Artist(nimi) VALUES (?)");
             dbconnection.setAutoCommit(false);
             preparedStatement.setString(1, object.getNimi());
@@ -105,7 +97,7 @@ public class ArtistDao implements Dao<Artist, Integer> {
 
     @Override
     public void delete(Integer key) throws SQLException, Exception {
-        Connection conn = getConnection();
+        Connection conn = database.getConnection();
         PreparedStatement pre = conn.prepareStatement("DELETE FROM Artist WHERE id = ?");
         pre.setInt(1, key);
         pre.executeUpdate();
@@ -115,7 +107,7 @@ public class ArtistDao implements Dao<Artist, Integer> {
 
     }
     public void deleteByName(String name) throws SQLException , Exception{
-        Connection conn = getConnection();
+        Connection conn = database.getConnection();
         PreparedStatement pre = conn.prepareStatement("DELETE FORM Artist WHERE nimi = ?");
         pre.setString(1, name);
         pre.executeUpdate();

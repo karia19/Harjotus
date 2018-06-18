@@ -18,20 +18,12 @@ public class KappaleetDao implements Dao<Kappaleet, Integer> {
         this.database = database;
         this.artistDao = artistDao;
     }
-    public static Connection getConnection() throws Exception {
-        String dbUrl = System.getenv("JDBC_DATABASE_URL");
-        if (dbUrl != null && dbUrl.length() > 0) {
-            return DriverManager.getConnection(dbUrl);
-        }
-
-        return DriverManager.getConnection("jdbc:sqlite:HarjoitusTyö.db");
-    }
 
 
     @Override
     public Kappaleet findOne(Integer key) throws SQLException, Exception {
 
-        Connection conn = getConnection();
+        Connection conn = database.getConnection();
         PreparedStatement st = conn.prepareStatement("SELECT * FROM Kappaleet WHERE trackArtist = ?");
         st.setObject(1, key);
 
@@ -58,7 +50,7 @@ public class KappaleetDao implements Dao<Kappaleet, Integer> {
     @Override
     public List<Kappaleet> findAll() throws SQLException, Exception {
         List<Kappaleet> kap = new ArrayList<>();
-        Connection conn = getConnection();
+        Connection conn = database.getConnection();
         PreparedStatement pre = conn.prepareStatement("SELECT * FROM Kappaleet");
         ResultSet res = pre.executeQuery();
 
@@ -78,7 +70,7 @@ public class KappaleetDao implements Dao<Kappaleet, Integer> {
     @Override
     public List<Kappaleet> findAllBydId(Integer key) throws SQLException, Exception {
         List<Kappaleet> list = new ArrayList<>();
-        Connection conn = getConnection();
+        Connection conn = database.getConnection();
         PreparedStatement st = conn.prepareStatement("SELECT * FROM Kappaleet WHERE trackArtist = ?");
         st.setObject(1, key);
 
@@ -108,7 +100,7 @@ public class KappaleetDao implements Dao<Kappaleet, Integer> {
         PreparedStatement preparedStatement = null;
 
         try {
-            dbconnection = getConnection();
+            dbconnection = database.getConnection();
             preparedStatement = dbconnection.prepareStatement("INSERT INTO Kappaleet(trackArtist, nimi, vuosi, kommenti) VALUES (?, ?,?,?)");
             dbconnection.setAutoCommit(false);
             preparedStatement.setInt(1, object.getId());
@@ -133,7 +125,7 @@ public class KappaleetDao implements Dao<Kappaleet, Integer> {
     @Override
     public int count(Integer key) throws SQLException, Exception {
 
-        Connection conn = getConnection();
+        Connection conn = database.getConnection();
         PreparedStatement pre = conn.prepareStatement("SELECT COUNT (*) FROM Kappaleet WHERE trackArtist = ?");
         pre.setInt(1, key);
         ResultSet r = pre.executeQuery();
@@ -145,7 +137,7 @@ public class KappaleetDao implements Dao<Kappaleet, Integer> {
 
     @Override
     public int countAll() throws SQLException, Exception {
-        Connection conn = getConnection();
+        Connection conn = database.getConnection();
         PreparedStatement pre = conn.prepareStatement("SELECT COUNT (*) FROM Kappaleet;");
         ResultSet r = pre.executeQuery();
         int total = r.getInt(1);
@@ -155,7 +147,7 @@ public class KappaleetDao implements Dao<Kappaleet, Integer> {
 
     @Override
     public int maxComments() throws SQLException, Exception {
-        Connection conn = getConnection();
+        Connection conn = database.getConnection();
         PreparedStatement pre = conn.prepareStatement("SELECT MAX(trackArtist) FROM Kappaleet");
         ResultSet r = pre.executeQuery();
 
@@ -165,7 +157,7 @@ public class KappaleetDao implements Dao<Kappaleet, Integer> {
 
     @Override
     public void delete(Integer key) throws SQLException, Exception {
-        Connection conn = getConnection();
+        Connection conn = database.getConnection();
         PreparedStatement pre = conn.prepareStatement("DELETE FROM Kappaleet WHERE trackArtist = ?");
         pre.setInt(1, key);
         pre.executeUpdate();
@@ -176,7 +168,7 @@ public class KappaleetDao implements Dao<Kappaleet, Integer> {
 
     }
     private Kappaleet findByName(String name) throws SQLException, Exception {
-        try (Connection conn = getConnection()) {
+        try (Connection conn = database.getConnection()) {
             PreparedStatement stmt = conn.prepareStatement("SELECT * FROM Artist, Kappaleet WHERE Artist.nimi = ? AND Kappaleet.trackArtist = Artist.id");
             stmt.setString(1, name);
 
