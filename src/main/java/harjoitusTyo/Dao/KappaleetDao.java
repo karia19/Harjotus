@@ -150,7 +150,7 @@ public class KappaleetDao implements Dao<Kappaleet, Integer> {
     @Override
     public int maxComments() throws SQLException, Exception {
         Connection conn = database.getConnection();
-        PreparedStatement pre = conn.prepareStatement("SELECT MAX(trackArtist) FROM Kappaleet");
+        PreparedStatement pre = conn.prepareStatement("SELECT trackArtist FROM  Kappaleet GROUP BY trackArtist ORDER BY COUNT(*) DESC LIMIT 1");
         ResultSet r = pre.executeQuery();
 
         r.next();

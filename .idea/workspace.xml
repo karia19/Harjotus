@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a4622eeb-8c8d-49a0-ba1a-2c5ebdb48718" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Songs.db" afterPath="$PROJECT_DIR$/Songs.db" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/harjoitusTyo/Dao/ArtistDao.java" afterPath="$PROJECT_DIR$/src/main/java/harjoitusTyo/Dao/ArtistDao.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -43,7 +40,7 @@
       <file leaf-file-name="KappaleetDao.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/harjoitusTyo/Dao/KappaleetDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="582">
+            <state relative-caret-position="523">
               <caret line="149" column="13" lean-forward="false" selection-start-line="149" selection-start-column="13" selection-end-line="149" selection-end-column="13" />
               <folding />
             </state>
@@ -167,17 +164,17 @@
         <option value="$PROJECT_DIR$/src/main/resources/templates/stats.html" />
         <option value="$PROJECT_DIR$/src/main/java/harjoitusTyo/Dao/Dao.java" />
         <option value="$PROJECT_DIR$/src/main/java/harjoitusTyo/Database/Database.java" />
-        <option value="$PROJECT_DIR$/src/main/java/harjoitusTyo/Dao/KappaleetDao.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/songs.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/artisti.html" />
         <option value="$PROJECT_DIR$/src/main/java/harjoitusTyo/aloitus/main.java" />
         <option value="$PROJECT_DIR$/src/main/java/harjoitusTyo/Dao/ArtistDao.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/index.html" />
+        <option value="$PROJECT_DIR$/src/main/java/harjoitusTyo/Dao/KappaleetDao.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1934" />
+    <option name="x" value="1932" />
     <option name="y" value="-273" />
     <option name="width" value="1782" />
     <option name="height" value="1360" />
@@ -488,8 +485,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1934" y="-273" width="1782" height="1360" extended-state="0" />
-    <editor active="true" />
+    <frame x="1932" y="-273" width="1782" height="1360" extended-state="0" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -501,7 +497,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41954023" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3312253" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3312253" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.123563215" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -936,7 +932,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/harjoitusTyo/Dao/KappaleetDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="582">
+        <state relative-caret-position="523">
           <caret line="149" column="13" lean-forward="false" selection-start-line="149" selection-start-column="13" selection-end-line="149" selection-end-column="13" />
           <folding />
         </state>
