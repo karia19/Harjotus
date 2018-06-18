@@ -25,7 +25,7 @@ public class main {
             return DriverManager.getConnection(dbUrl);
         }
 
-        return DriverManager.getConnection("jdbc:sqlite:huonekalut.db");
+        return DriverManager.getConnection("jdbc:sqlite:Songs.db");
     }
 
 
@@ -74,13 +74,17 @@ public class main {
         Spark.post("/artisti", (Request req, Response res) -> {
             HashMap map1 = new HashMap<>();
             String id = req.queryParams("remove");
-            //artistDao.delete(Integer.parseInt(id));
-            //kappaleetDao.delete(Integer.parseInt(id));
 
             String name = req.queryParams("name");
-            if (name.isEmpty()){
+            if (name.isEmpty() && id.isEmpty()){
                 map1.put("uusiArtisti", "....You miss something....");
+
+            } else if (id.matches("^[0-9]*$") && name.isEmpty()) {
+                map1.put("uusiArtisti", "....Delete Complete....");
                 artistDao.delete(Integer.parseInt(id));
+
+            } else if (id.isEmpty() && name.isEmpty()) {
+                map1.put("uusiArtisti", "....You miss something....");
 
             } else {
                 Artist artist = new Artist(-1, req.queryParams("name"));
@@ -88,6 +92,7 @@ public class main {
                 map1.put("artist", artistDao.findAll());
 
             }
+
             return new ModelAndView(map1, "artisti");
         }, new ThymeleafTemplateEngine());
 
