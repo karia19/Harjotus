@@ -3,8 +3,19 @@
   <component name="ChangeListManager">
     <list default="true" id="a4622eeb-8c8d-49a0-ba1a-2c5ebdb48718" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/harjoitusTyo/Dao/KappaleetDao.java" afterPath="$PROJECT_DIR$/src/main/java/harjoitusTyo/Dao/KappaleetDao.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/harjoitusTyo/Database/Database.java" afterPath="$PROJECT_DIR$/src/main/java/harjoitusTyo/Database/Database.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/harjoitusTyo/aloitus/main.java" afterPath="$PROJECT_DIR$/src/main/java/harjoitusTyo/aloitus/main.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/songs.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/songs.html" />
+      <change beforePath="$PROJECT_DIR$/target/classes/harjoitusTyo/Dao/ArtistDao.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/harjoitusTyo/Dao/Dao.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/harjoitusTyo/Dao/KappaleetDao.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/harjoitusTyo/Database/Database.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/harjoitusTyo/aloitus/main.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/harjoitusTyo/domain/Artist.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/harjoitusTyo/domain/Kappaleet.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/artisti.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/songs.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/stats.html" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -21,7 +32,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/harjoitusTyo/Database/Database.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="330">
-              <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+              <caret line="22" column="5" lean-forward="false" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -30,8 +41,8 @@
       <file leaf-file-name="main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/harjoitusTyo/aloitus/main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+            <state relative-caret-position="195">
+              <caret line="102" column="0" lean-forward="false" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -39,11 +50,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="KappaleetDao.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="KappaleetDao.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/harjoitusTyo/Dao/KappaleetDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="132" column="17" lean-forward="false" selection-start-line="132" selection-start-column="17" selection-end-line="132" selection-end-column="17" />
+            <state relative-caret-position="621">
+              <caret line="149" column="13" lean-forward="false" selection-start-line="149" selection-start-column="13" selection-end-line="149" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -52,8 +63,8 @@
       <file leaf-file-name="artisti.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/artisti.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="34" column="27" lean-forward="false" selection-start-line="34" selection-start-column="27" selection-end-line="34" selection-end-column="27" />
+            <state relative-caret-position="390">
+              <caret line="26" column="46" lean-forward="true" selection-start-line="26" selection-start-column="2" selection-end-line="26" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -69,11 +80,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="songs.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="songs.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/songs.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+            <state relative-caret-position="402">
+              <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -150,13 +161,13 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/artisti.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/index.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/songs.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/stats.html" />
         <option value="$PROJECT_DIR$/src/main/java/harjoitusTyo/Dao/Dao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/harjoitusTyo/aloitus/main.java" />
         <option value="$PROJECT_DIR$/src/main/java/harjoitusTyo/Dao/ArtistDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/harjoitusTyo/Database/Database.java" />
         <option value="$PROJECT_DIR$/src/main/java/harjoitusTyo/Dao/KappaleetDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/harjoitusTyo/aloitus/main.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/songs.html" />
       </list>
     </option>
   </component>
@@ -807,30 +818,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/songs.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/artisti.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="27" lean-forward="false" selection-start-line="34" selection-start-column="27" selection-end-line="34" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -867,28 +854,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/harjoitusTyo/aloitus/main.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/harjoitusTyo/Dao/KappaleetDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="621">
+          <caret line="149" column="13" lean-forward="false" selection-start-line="149" selection-start-column="13" selection-end-line="149" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/harjoitusTyo/Database/Database.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
-          <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+          <caret line="22" column="5" lean-forward="false" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/harjoitusTyo/Dao/KappaleetDao.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/harjoitusTyo/aloitus/main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="132" column="17" lean-forward="false" selection-start-line="132" selection-start-column="17" selection-end-line="132" selection-end-column="17" />
+        <state relative-caret-position="195">
+          <caret line="102" column="0" lean-forward="false" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/artisti.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="46" lean-forward="true" selection-start-line="26" selection-start-column="2" selection-end-line="26" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/songs.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
           <folding />
         </state>
       </provider>

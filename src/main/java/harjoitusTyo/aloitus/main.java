@@ -100,7 +100,7 @@ public class main {
             HashMap map = new HashMap();
             int id = Integer.parseInt(req.queryParams("artistii"));
             System.out.println(id);
-            //String artist = req.queryParams("artist");
+
             String kappale = req.queryParams("name");
             Integer vuosi = Integer.parseInt(req.queryParams("year"));
             String tarina = req.queryParams("story");
