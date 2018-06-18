@@ -23,6 +23,7 @@ public class Database {
     }
     */
     public  Connection getConnection() throws Exception {
+
         String dbUrl = System.getenv("JDBC_DATABASE_URL");
         if (dbUrl != null && dbUrl.length() > 0) {
             return DriverManager.getConnection(dbUrl);
@@ -30,6 +31,7 @@ public class Database {
 
         return DriverManager.getConnection("jdbc:sqlite:aloitus.db");
     }
+
 
 }
 

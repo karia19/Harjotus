@@ -130,6 +130,7 @@ public class KappaleetDao implements Dao<Kappaleet, Integer> {
         pre.setInt(1, key);
         ResultSet r = pre.executeQuery();
 
+        r.next();
         int total = r.getInt(1);
 
         return total;
@@ -140,6 +141,7 @@ public class KappaleetDao implements Dao<Kappaleet, Integer> {
         Connection conn = database.getConnection();
         PreparedStatement pre = conn.prepareStatement("SELECT COUNT (*) FROM Kappaleet;");
         ResultSet r = pre.executeQuery();
+        r.next();
         int total = r.getInt(1);
 
         return total;
@@ -151,6 +153,7 @@ public class KappaleetDao implements Dao<Kappaleet, Integer> {
         PreparedStatement pre = conn.prepareStatement("SELECT MAX(trackArtist) FROM Kappaleet");
         ResultSet r = pre.executeQuery();
 
+        r.next();
         int tot = r.getInt(1);
         return tot;
     }
