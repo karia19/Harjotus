@@ -17,7 +17,6 @@ public class ArtistDao implements Dao<Artist, Integer> {
 
     @Override
     public Artist findOne(Integer key) throws SQLException, Exception {
-        //Connection conn = database.getConnection();
         Connection conn =database.getConnection();
         PreparedStatement pre = conn.prepareStatement("SELECT * FROM Artist WHERE id = ?");
         pre.setObject(1, key);
