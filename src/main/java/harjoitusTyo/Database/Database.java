@@ -28,7 +28,7 @@ public class Database {
             return DriverManager.getConnection(dbUrl);
         }
 
-        return DriverManager.getConnection("jdbc:sqlite:HarjoitusTyö.db");
+        return DriverManager.getConnection("jdbc:sqlite:aloitus.db");
     }
 
 }
