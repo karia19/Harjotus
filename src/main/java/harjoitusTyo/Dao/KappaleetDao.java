@@ -24,7 +24,7 @@ public class KappaleetDao implements Dao<Kappaleet, Integer> {
             return DriverManager.getConnection(dbUrl);
         }
 
-        return DriverManager.getConnection("jdbc:sqlite:harjoitusTyo.db");
+        return DriverManager.getConnection("jdbc:sqlite:HarjoitusTyö.db");
     }
 
 

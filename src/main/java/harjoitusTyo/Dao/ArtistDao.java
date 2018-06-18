@@ -19,7 +19,7 @@ public class ArtistDao implements Dao<Artist, Integer> {
             return DriverManager.getConnection(dbUrl);
         }
 
-        return DriverManager.getConnection("jdbc:sqlite:harjoitusTyo.db");
+        return DriverManager.getConnection("jdbc:sqlite:HarjoitusTyö.db");
     }
 
 
