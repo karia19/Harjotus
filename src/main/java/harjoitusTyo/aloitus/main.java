@@ -72,9 +72,6 @@ public class main {
                 map1.put("uusiArtisti", "....Delete Complete....");
                 artistDao.delete(Integer.parseInt(id));
 
-            } else if (id.matches("^[0-9]*$") && name.isEmpty()){
-                kappaleetDao.delete(Integer.parseInt(id));
-
             } else if (id.isEmpty() && name.isEmpty()) {
                 map1.put("uusiArtisti", "....You miss something....");
 

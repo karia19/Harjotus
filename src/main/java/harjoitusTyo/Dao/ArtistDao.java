@@ -97,8 +97,9 @@ public class ArtistDao implements Dao<Artist, Integer> {
     @Override
     public void delete(Integer key) throws SQLException, Exception {
         Connection conn = database.getConnection();
-        PreparedStatement pre = conn.prepareStatement("DELETE FROM Artist WHERE id = ?");
+        PreparedStatement pre = conn.prepareStatement("DELETE FROM Kappaleet WHERE trackArtist = ?; DELETE FROM Artist WHERE id = ?");
         pre.setInt(1, key);
+        pre.setInt(2, key);
         pre.executeUpdate();
 
         pre.close();
